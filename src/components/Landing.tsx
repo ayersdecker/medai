@@ -1,5 +1,4 @@
 import React from 'react'
-
 import symptomChecker from '../assets/symptom-checker.svg'
 import reminders from '../assets/reminders.svg'
 import analytics from '../assets/analytics.svg'
@@ -9,7 +8,6 @@ interface LandingProps {
   onLogin: () => void
   onSignUp: () => void
 }
-
 const features = [
   {
     img: symptomChecker,
@@ -47,6 +45,11 @@ export default function Landing({ onLogin, onSignUp }: LandingProps) {
           </div>
         ))}
       </div>
+      <ul>
+        <li>Symptom checker powered by machine learning</li>
+        <li>Medication reminders and tracking</li>
+        <li>Secure health record storage</li>
+      </ul>
       <div>
         <button type="button" onClick={onSignUp}>Get Started</button>
         <p>
