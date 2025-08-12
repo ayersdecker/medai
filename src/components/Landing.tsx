@@ -7,7 +7,7 @@ interface LandingProps {
 
 export default function Landing({ onLogin, onSignUp }: LandingProps) {
   return (
-    <section>
+    <section className="glass-card">
       <h1>MedAI</h1>
       <p>Welcome to MedAI, your AI-powered medical assistant.</p>
       <ul>

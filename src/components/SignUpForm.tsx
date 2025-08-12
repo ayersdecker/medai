@@ -15,7 +15,7 @@ export default function SignUpForm({ onLogin, onBack }: SignUpFormProps) {
   }
 
   return (
-    <section>
+    <section className="glass-card">
       <h2>Create your account</h2>
       <form onSubmit={handleSubmit}>
         <label>
