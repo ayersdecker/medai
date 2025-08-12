@@ -1,5 +1,4 @@
 import React from 'react'
-
 import assetUpload from '../assets/asset-upload.svg'
 import aiImage from '../assets/ai-image.svg'
 import socialSeo from '../assets/social-seo.svg'
@@ -9,7 +8,6 @@ interface LandingProps {
   onLogin: () => void
   onSignUp: () => void
 }
-
 const features = [
   {
     img: assetUpload,
@@ -36,8 +34,8 @@ const features = [
 export default function Landing({ onLogin, onSignUp }: LandingProps) {
   return (
     <section className="glass-card">
-      <h1>MedAI</h1>
-      <p>Welcome to MedAI, your AI partner for social media content.</p>
+      <h1>Medai</h1>
+      <p>Welcome to Medai, your AI partner for social media content.</p>
       <div className="feature-grid">
         {features.map((f) => (
           <div key={f.title} className="feature">
