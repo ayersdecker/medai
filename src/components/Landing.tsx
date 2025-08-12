@@ -1,8 +1,8 @@
 import React from 'react'
-import symptomChecker from '../assets/symptom-checker.svg'
-import reminders from '../assets/reminders.svg'
-import analytics from '../assets/analytics.svg'
-import secureRecords from '../assets/secure-records.svg'
+import assetUpload from '../assets/asset-upload.svg'
+import aiImage from '../assets/ai-image.svg'
+import socialSeo from '../assets/social-seo.svg'
+import cloudLibrary from '../assets/cloud-library.svg'
 
 interface LandingProps {
   onLogin: () => void
@@ -10,32 +10,32 @@ interface LandingProps {
 }
 const features = [
   {
-    img: symptomChecker,
-    title: 'AI Symptom Checker',
-    desc: 'Get instant insights powered by machine learning.',
+    img: assetUpload,
+    title: 'Brand Asset Uploads',
+    desc: 'Store logos and media for on-brand creation.',
   },
   {
-    img: reminders,
-    title: 'Smart Medication Reminders',
-    desc: 'Never miss a dose with personalized alerts.',
+    img: aiImage,
+    title: 'AI Content Generator',
+    desc: 'Produce posts using your brand assets in seconds.',
   },
   {
-    img: analytics,
-    title: 'Real-Time Analytics',
-    desc: 'Visualize your health trends at a glance.',
+    img: socialSeo,
+    title: 'Social SEO Insights',
+    desc: 'Optimize captions and hashtags for maximum reach.',
   },
   {
-    img: secureRecords,
-    title: 'Secure Cloud Records',
-    desc: 'Your data is protected with end-to-end encryption.',
+    img: cloudLibrary,
+    title: 'Cloud Asset Library',
+    desc: 'Access your creatives securely from anywhere.',
   },
 ]
 
 export default function Landing({ onLogin, onSignUp }: LandingProps) {
   return (
     <section className="glass-card">
-      <h1>MedAI</h1>
-      <p>Welcome to MedAI, your AI-powered medical assistant.</p>
+      <h1>Medai</h1>
+      <p>Welcome to Medai, your AI partner for social media content.</p>
       <div className="feature-grid">
         {features.map((f) => (
           <div key={f.title} className="feature">
@@ -45,11 +45,6 @@ export default function Landing({ onLogin, onSignUp }: LandingProps) {
           </div>
         ))}
       </div>
-      <ul>
-        <li>Symptom checker powered by machine learning</li>
-        <li>Medication reminders and tracking</li>
-        <li>Secure health record storage</li>
-      </ul>
       <div>
         <button type="button" onClick={onSignUp}>Get Started</button>
         <p>

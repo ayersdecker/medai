@@ -17,6 +17,7 @@ export default function LoginForm({ onSignUp, onBack }: LoginFormProps) {
   return (
     <section className="glass-card">
       <h2>Log in</h2>
+      <p>Access your brand library and create new posts.</p>
       <form onSubmit={handleSubmit}>
         <label>
           Email
