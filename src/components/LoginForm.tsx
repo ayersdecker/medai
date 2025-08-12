@@ -7,6 +7,7 @@ interface LoginFormProps {
 }
 
 export default function LoginForm({ onSignUp, onBack, onSuccess }: LoginFormProps) {
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
