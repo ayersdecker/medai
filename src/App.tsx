@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import Landing from './components/Landing'
 import SignUpForm from './components/SignUpForm'
 import LoginForm from './components/LoginForm'
+import Home from './components/Home'
 
-type Page = 'landing' | 'signup' | 'login'
+type Page = 'landing' | 'signup' | 
 
 export default function App() {
   const [page, setPage] = useState<Page>('landing')
@@ -13,7 +14,17 @@ export default function App() {
   }
 
   if (page === 'login') {
-    return <LoginForm onSignUp={() => setPage('signup')} onBack={() => setPage('landing')} />
+    return (
+      <LoginForm
+        onSignUp={() => setPage('signup')}
+        onBack={() => setPage('landing')}
+        onSuccess={() => setPage('home')}
+      />
+    )
+  }
+
+  if (page === 'home') {
+    return <Home onLogout={() => setPage('landing')} />
   }
 
   return <Landing onLogin={() => setPage('login')} onSignUp={() => setPage('signup')} />

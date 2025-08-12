@@ -3,15 +3,18 @@ import React, { useState } from 'react'
 interface LoginFormProps {
   onSignUp: () => void
   onBack: () => void
+  onSuccess: () => void
 }
 
-export default function LoginForm({ onSignUp, onBack }: LoginFormProps) {
+export default function LoginForm({ onSignUp, onBack, onSuccess }: LoginFormProps) {
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     alert(`Log in with ${email}`)
+    onSuccess()
   }
 
   return (
