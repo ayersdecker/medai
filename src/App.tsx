@@ -4,7 +4,7 @@ import SignUpForm from './components/SignUpForm'
 import LoginForm from './components/LoginForm'
 import Home from './components/Home'
 
-type Page = 'landing' | 'signup' | 
+type Page = 'landing' | 'signup' | 'login' | 'home'
 
 export default function App() {
   const [page, setPage] = useState<Page>('landing')
